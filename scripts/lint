@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+set -e
+set -x
+
+
+mypy unasyncer
+flake8 unasyncer
+
+black --check unasyncer tests
+isort --recursive --check-only unasyncer tests
